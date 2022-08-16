@@ -7,13 +7,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        //feature we use to provide the paft of all the feature file
-        features = "src/test/resources/features/Login.feature",
-        //glue is where we find implementation for gherkin steps
-        //we provide the path of package where we difined all the steps
+        //features we use to provide the path of all the features file
+        features = "src/test/resources/features/EmployeeSearch.feature",
+        //glue is where we find implementations for gherkin steps
+        //we provide the path of package where we defined all the steps
         glue = "steps"
 )
-
 public class RunnerClass {
 
 }

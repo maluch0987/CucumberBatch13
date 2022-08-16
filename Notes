@@ -1,57 +1,57 @@
 Class 1 - Cucumber
 
-Cucumber - It is a tool that supports BDD.
+Cucumber - it is a tool that supports BDD
 
-Given - precondition
+Given - pre condition
 When - to perform actions
 And - supporting tag
-Then - expected result / outcome
+Then - expected result/outcome
 
-us - 12345 - Search employee by name:
+
+US - 2345 - Search employee by id
 Given user is able to open chrome browser
 When user enters username and password
 And user clicks on login button
 Then user is navigated to dashboard page
-When user click on PIM option
-And user clicks on Employee List option
-When user enters Name in the Employee Name field
-And user click on Search button
-Then user is able to see the employee.
+When user clicks on PIM option
+And user clicks on employee list option
+When user enters id in the employee id field
+And user clicks on search button
+Then user is able to see the employee
 
-US 2345 - Search employee by id
-Given user is able to open chrome browser
-When user enters username and password
-And user clicks on login button
-Then user is navigated to dashboard page
-When user click on PIM option
-And user clicks on Employee List option
-When user enters Id in the Employee Id field
-And user click on Search button
-Then user is able to see the employee.
+-- Cucumbers encourages code reusability concept
 
--- Cucumber encourages code re-usability concept
+main - the code we write to develop the application, we write under main
 
-main folder in navigation tree is used for writing code to develop the application.
-We are not developers so we can delete this folder.
+develop the application
+to test the application
 
-1. write code to develop the application - done in main folder
-2. the code we write to test the application - done by testers.
-to test the application,we write under test
+test - the code we write to test the application, we write under test
 
 2 things we have in every project
--coding-java
--non-java
+
+- coding - java
+- non - java  - properties file, excel etc.
 
 coding will be at one place
 non java will be at another place
---to write gherkin scenarios,wd use feature files
 
 
-Given user is navigate to HRM application
+-- to write gherkin scenarios, we use feature files
+
+
+
+Valid admin login
+Given user is navigated to HRMS application
 When user enters admin username and password
-And click on login button
-Then admin is successfully logged in
+And clicks on login button
+Then admin user is successfully logged in
 
-Scenario-- every scenario is considered
+scenario - every scenario is considered as one test case
 
+why we don't need system.setproperty() -  "driver/chromedriver.exe"
+if the path is incorrect to webdriver - it will fail, path is limited to one machine
+many time it is not compatible with browser
+
+we use webdrivermanager from now onwards
 

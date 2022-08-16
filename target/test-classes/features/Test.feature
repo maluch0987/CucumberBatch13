@@ -1,3 +1,4 @@
-Feature:
+Feature: This is test feature
   Scenario:
-    Given I am able to open browser
+    Given user is navigated to HRMS application
+    When user enters invalid username and password open browser
