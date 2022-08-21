@@ -101,4 +101,74 @@ Background is applicable to just one feature file\
 
 Hooks execute first then background executes then scenario executes and in the
 end hooks executes again as post condition
+=======================================================================================
+class - 4
+
+    -- recap --
+        -- cucumber options in runner class -
+        dry run - to quickly get the step definitions
+
+    --whenever we write new scenario in feature file, we must set dryrun to true
+    for step definition and then put this definition under steps package, after
+    writing the code in it, again set dryrun to false and execute the script
+
+
+        monochrome - when we set it to true, it removes irrelevant information
+        or unreadable character from console while executing cucumber test cases.
+
+        Hooks -
+        pre condition @Before
+        post condition @After
+
+        we must keep hooks class under steps package
+
+        background - common steps in a feature file until flow is not broken
+
+       it is applicable only to a feature file, every file can have a different background
+
+       tags - to categorize our scenarios for execution
+
+       what is data driver testing
+        when we execute our script against multiple sets of data we call it data
+        driven testing
+===============================================================================================
+    Class 5 -
+    -- recap --
+        -- What is data driven testing?
+        --
+
+
+    Data table -
+
+    examples table - works for complete scenario
+    Data table - it works only for one step
+
+Class 6
+ --  recap --
+    Data table -
+    we use data table to achieve data driven testing
+
+    2 types of data table -
+    with headers - list of maps
+    without headers - list
+
+    excel file - spreadsheets
+
+Homework - modify the details of the employee after adding it in the HRMS
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+                <configuration>
+                //we use inlcludes tag to run our runner classes
+                //** means src folder/* means runner package and then file name
+                    <includes>
+                        <include>**/*RunnerClass.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+
 

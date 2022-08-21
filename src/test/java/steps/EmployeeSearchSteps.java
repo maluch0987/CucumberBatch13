@@ -1,8 +1,6 @@
 package steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.DashboardPage;
-import pages.EmployeeInformationPage;
 import utils.CommonMethods;
 
 public class EmployeeSearchSteps extends CommonMethods {
@@ -42,7 +40,6 @@ public class EmployeeSearchSteps extends CommonMethods {
 
     @When("user enters name of the employee")
     public void user_enters_name_of_the_employee() {
-        sendText(emp.nameEmployeeSearch,  "test");
+        sendText(emp.nameEmployeeSearch, "test");
     }
-
 }

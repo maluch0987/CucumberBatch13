@@ -3,8 +3,9 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openxmlformats.schemas.presentationml.x2006.main.CTCommonSlideData;
 import utils.CommonMethods;
+
+import java.util.List;
 
 public class DashboardPage extends CommonMethods {
 
@@ -13,6 +14,13 @@ public class DashboardPage extends CommonMethods {
 
     @FindBy(id="menu_pim_viewEmployeeList")
     public WebElement employeeListOption;
+
+    @FindBy(id="menu_pim_addEmployee")
+    public WebElement addEmployeeOption;
+
+    @FindBy(xpath = "//*[@class='menu']/ul/li")
+    public List<WebElement> dashboardTabs;
+
 
     public DashboardPage(){
         PageFactory.initElements(driver, this);
