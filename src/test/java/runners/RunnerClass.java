@@ -1,6 +1,5 @@
 package runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -23,7 +22,11 @@ import org.junit.runner.RunWith;
         tags = "@sprint29",
         //when you use pretty keyword under plugins, it shows all the steps which you
         //executed in console
-        plugin = {"pretty", "html:target/cucumber.html"}
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json",
+                "rerun:target/failed.txt"}
+
+        //rerun plugin is going to capture all the scenarios which were failed during execution
+
 )
 public class RunnerClass {
 
